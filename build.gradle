@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        maven {
+            url 'http://dl.bintray.com/ecpluginsdev/maven'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath "com.electriccloud.flowpdf:gradleplugin:1.0.0"
+    }
+}
+
+apply plugin: 'com.electriccloud.flowpdf.gradleplugin'
+apply plugin: 'groovy'
+
+flowpdk {
+    pluginName = "CB-Bamboo-Groovy" // required
+}
+
+defaultTasks 'flowpdkBuild'
+
+group 'com.cloudbees.com.flowpdf'
+version '1.0.0'

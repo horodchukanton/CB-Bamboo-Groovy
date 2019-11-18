@@ -1,0 +1,95 @@
+# This is default sample specification
+# Feel free to change it
+# Call flowpdk showdoc pluginspec to see the list of available fields and their description
+pluginInfo:
+  pluginName: 'CB-Groovy-Bamboo'
+  version: '1.0.0'
+  description: 'QA plugin for bamboo'
+  author: 'Ed Serbin'
+  authorUrl: 'https://www.atlassian.com/software/bamboo'
+  category: 'Continuous Integration'
+
+configuration:
+  parameters:
+    - name: authScheme
+      type: entry
+      label: authScheme
+      value: basic
+    - name: config
+      type: entry
+      label: Configuration Name
+      required: true
+      documentation: The name for the created configuration
+    - name: desc
+      type: entry
+      label: Description
+      required: false
+      documentation: Description for the configuration
+    - name: endpoint
+      label: Endpoint
+      type: entry
+      required: true
+      documentation: Third-party endpoint to connect to.
+    - name: basic_credential
+      type: credential
+      label: Credential
+      userNameLabel: Username
+      required: true
+      passwordLabel: Password
+    - name: checkConnection
+      label: Check Connection?
+      type: checkbox
+      checkedValue: true
+      uncheckedValue: false
+      initiallyChecked: 1
+    - name: debugLevel
+      # This parameter name "debugLevel" is supported by ECPDF Logger out of the box
+      label: Debug Level
+      type: select
+      required: 0
+      value: 0
+      options:
+        - name: Info
+          value: 0
+        - name: Debug
+          value: 1
+        - name: Trace
+          value: 2
+
+procedures:
+  - name: 'Sample REST Procedure'
+    description: 'This procedure demonstrates a simple REST call'
+    hasConfig: true
+    shell: 'ec-groovy'
+    parameters:
+      - name: username
+        documentation: Sample parameter
+        required: true
+        type: entry
+        label: Username
+
+
+
+### Specification for Integration with RCC DevOps Insight Dashboards ###
+devOpsInsight:
+  # Data source name, e.g. My Plugin Source
+  # (Required)
+  datasourceName: 'Bamboo Groovy'
+  supportedReports:
+    - reportObjectType: build
+      parameters:
+        - name: projectKey
+          documentation: null
+          required: true
+          type: entry
+          label: Project Key
+        - name: planKey
+          documentation: null
+          required: false
+          type: entry
+          label: Plan Key
+        - name: initialRecordsCount
+          documentation: null
+          required: false
+          type: entry
+          label: Initial Count
