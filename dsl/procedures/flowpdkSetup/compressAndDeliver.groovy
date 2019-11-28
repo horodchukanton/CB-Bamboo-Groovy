@@ -1,3 +1,5 @@
+// Do not change this file, it will completely overwritten over during flowpdk generate plugin
+
 import java.security.MessageDigest
 import groovy.json.JsonOutput
 import java.util.zip.ZipEntry

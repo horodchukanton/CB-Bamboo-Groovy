@@ -22,18 +22,6 @@
     <label>Plan Key:</label>
   </formElement>
   <formElement>
-    <type>checkbox</type>
-    <property>retrieveTestResults</property>
-    <required>0</required>
-    <label>Retrieve Test Results?:</label>
-  </formElement>
-  <formElement>
-    <type>entry</type>
-    <property>testCategory</property>
-    <required>0</required>
-    <label>Test Category:</label>
-  </formElement>
-  <formElement>
     <type>entry</type>
     <property>initialRecordsCount</property>
     <required>0</required>

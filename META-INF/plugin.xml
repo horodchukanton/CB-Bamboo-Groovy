@@ -2,7 +2,7 @@
 <plugin>
   <key>CB-Groovy-Bamboo</key>
   <label>CB-Groovy-Bamboo</label>
-  <author>Ed Serbin</author>
+  <author>CloudBees</author>
   <category>Continuous Integration</category>
   <description>QA plugin for bamboo</description>
   <configure>ec_config</configure>

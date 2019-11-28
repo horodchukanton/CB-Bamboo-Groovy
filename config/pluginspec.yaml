@@ -5,7 +5,7 @@ pluginInfo:
   pluginName: 'CB-Groovy-Bamboo'
   version: '1.0.0'
   description: 'QA plugin for bamboo'
-  author: 'Ed Serbin'
+  author: 'CloudBees'
   authorUrl: 'https://www.atlassian.com/software/bamboo'
   category: 'Continuous Integration'
 
@@ -75,6 +75,7 @@ devOpsInsight:
   # Data source name, e.g. My Plugin Source
   # (Required)
   datasourceName: 'Bamboo Groovy'
+  language: groovy
   supportedReports:
     - reportObjectType: build
       parameters:
